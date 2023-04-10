@@ -1,0 +1,19 @@
+{
+  "name": "frontout",
+  "version": "1.0.0",
+  "description": "My astounding Nuxt.js project",
+  "author": "Sergey Zmeev",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/proxy": "^2.1.0",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
