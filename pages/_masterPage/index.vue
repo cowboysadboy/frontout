@@ -3,6 +3,7 @@
     <header-master :masterData="masterData"></header-master>
     <gallery-slider></gallery-slider>
     <not-master-dialog v-if="notMaster"></not-master-dialog>
+    <form-component></form-component>
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import HeaderMaster from "~/components/HeaderMaster.vue";
 import NotMasterDialog from "~/components/NotMasterDialog.vue";
 import GallerySlider from "~/components/GallerySlider.vue";
+import FormComponent from "~/components/FormComponent.vue";
 
 export default {
   components: {
     HeaderMaster,
     NotMasterDialog,
-    GallerySlider
+    GallerySlider,
+    FormComponent
   },
   data() {
     return {

@@ -14,11 +14,27 @@
         {{ masterData.firstName }} {{ masterData.nickname }}
         {{ masterData.lastName }}
       </h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit. Dignissimos, nihil?
-      </p>
     </div>
+    <div class="avatar__info container">
+      <div class="education">
+        <span class="work__response">Опыт: <b>3 года</b> </span>
+        <span class="education__response"
+          >Образование: <b>Художественное</b>
+        </span>
+      </div>
+      <div class="styles-list">
+        Стили:
+        <span class="styles-list__response">
+          <b>ЦВЕТНАЯ, НЕО ТРАДИЦИОННАЯ</b>
+        </span>
+      </div>
+    </div>
+    <p class="container">
+      Я - профессиональный тату-мастер с многолетним опытом работы и творческой
+      интуицией. Моя работа - это сочетание искусства, эстетики и эмоций,
+      которые помогут вам выразить вашу уникальность и индивидуальность через
+      татуировки.
+    </p>
   </div>
 </template>
 <script>
@@ -82,10 +98,31 @@ h1 {
   margin: 1px 5px;
 }
 p {
-  font-size: 15px;
+  font-size: 14px;
   color: rgb(61, 62, 63);
   margin: 10px 0;
   padding-bottom: 20px;
+}
+
+.avatar__info {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  margin-top: -10px !important;
+  margin-bottom: 20px !important;
+}
+.education,
+.styles-list,
+.work {
+  display: flex;
+  font-size: 13px;
+  font-weight: 600;
+  flex-direction: column;
+  color: #36363c;
+  margin-top: 10px;
+}
+.education {
+  margin-right: 40px;
 }
 .container {
   margin: 0 50px;
