@@ -19,3 +19,9 @@ body {
       rgba(253, 250, 250, 1) 42%,
       rgba(255, 255, 255, 1) 42%);
 }
+
+.menu {
+  .nuxt-link-exact-active {
+    background: #FFF;
+  }
+}

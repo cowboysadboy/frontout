@@ -1,10 +1,14 @@
 <template>
   <nuxt-link class="master" :to="master.nickname">
-    <img class="master__img" :src="master.avatar_link" alt="" />
-    <h2 class="master__name">
-      {{ master.lastName }} {{ master.nickname }} {{ master.firstName }}
-    </h2>
-    <p>{{ master.description }}</p>
+    <img v-if="master.avatar_link" class="master__img" width="144px" height="144px" :src="master.avatar_link"
+      alt="avatar">
+    <img v-else class="master__img" src="~/assets/images/master-page/default-image.svg" alt="avatar">
+    <div class="master__descr">
+      <h2 class="descr-name">
+        {{ master.lastName }} {{ master.nickname }} {{ master.firstName }}
+      </h2>
+      <p class="descr-p">{{ master.description }}</p>
+    </div>
   </nuxt-link>
 </template>
 <script>
@@ -23,15 +27,18 @@ export default {
 </script>
 <style lang="scss" scoped>
 .master {
-  padding: 15px 45px;
-  margin: 20px 45px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px;
+  margin: 5px 30px;
   background: white;
-  border: 1px solid black;
+  border: 1px solid rgb(196, 192, 192);
   text-decoration: none;
   color: black;
 
   &__img {
-    max-width: 350px;
+    object-fit: cover;
+    margin-right: 15px;
   }
 }
 </style>

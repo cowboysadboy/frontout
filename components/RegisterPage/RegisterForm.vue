@@ -1,22 +1,20 @@
 <template>
   <div class="form-container">
     <H1 class="h1">
-      Регистрация
+      РЕГИСТРАЦИЯ
     </H1>
     <form @submit.prevent="submitForm" class="form">
       <div class="form__connection">
-        <div class="connection name">
-          <label class="field-description" for="name">Никнейм (будет использоваться в ссылке,
-            например: https://ta2.link/masha-tattooing)</label>
-          <input type="text" id="name" name="name" v-model="lead.cliet_name" required />
+        <div class="connection username">
+          <label class="field-description" for="username">Логин</label>
+          <input type="text" id="username" name="username" v-model="user.username" required />
         </div>
-        <div class="connection email">
-          <label class="field-description" for="name">Е-mail (сюда приходят сообщения от клиентов)</label>
-          <input type="email" id="name" name="Email" v-model="lead.email" required />
+        <div class="connection password">
+          <label class="field-description" for="password">Пароль</label>
+          <input type="password" id="password" name="password" v-model="user.password" required />
         </div>
-        <div class="connection phone">
-          <label class="field-description" for="phone">Пароль</label>
-          <input type="password" id="phone" name="phone" v-model="lead.client_phone" required />
+        <div v-if="error" class="connection error">
+          {{ error }}!!!!
         </div>
       </div>
       <div class="form__footer">
@@ -37,14 +35,10 @@ export default {
   },
   data() {
     return {
-      lead: {
-        master_id: "",
-        cliet_name: "",
-        cliet_lastname: "",
-        client_phone: "",
-        tatoo_width: "",
-        tatoo_height: "",
-        contact_link: "",
+      error: '',
+      user: {
+        username: '',
+        password: ''
       },
     };
   },
@@ -52,33 +46,28 @@ export default {
 
   methods: {
     submitForm() {
+      const data = {
+        nickname: this.user.username,
+        password: this.user.password
+      }
+      this.error = ''
       // Отправка POST-запроса с помощью $http.post()
       this.$axios
-        .post("http://localhost:3000/addleads", {
-          master_id: this.masterData?.id,
-          cliet_name: this.lead.cliet_name,
-          cliet_lastname: this.lead.cliet_lastname,
-          client_phone: this.lead.client_phone,
-          tatoo_width: this.lead.tatoo_width,
-          tatoo_height: this.lead.tatoo_height,
-          contact_link: "",
-        })
-        .then(
-          (response) => {
-            // Обработка успешного ответа
-            console.log(response.data);
-          },
-          (error) => {
-            // Обработка ошибки
-            console.log(error);
-          }
-        );
+        .post("http://localhost:3000/masters", data)
+        .then((response) => {
+          // Обработка успешного ответа
+          console.log(response);
+        }
+        ).catch((error) => {
+          console.log(error.response.data);
+          this.error = error.response.data
+        });
     },
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .form-container {
   margin: 0 auto;
   max-width: 282px;
@@ -119,5 +108,10 @@ button {
   background: black;
   color: white;
   padding: 8px;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
 }
 </style>

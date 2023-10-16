@@ -1,13 +1,9 @@
 <template>
   <div class="wrapper">
     <app-header></app-header>
-    <menu-master :nickname="masterData.nickname"></menu-master>
+    <menu-master :nickname="$route.path.split('/')[1]"></menu-master>
     <div class="container">
-      <name-master :first_name="masterData.first_name" :last_name="masterData.last_name"
-        :nickname="masterData.nickname"></name-master>
-      <avatar-master :avatar_link="masterData.avatar_link" :city="masterData.city"
-        :work_expirience="masterData.work_expirience"></avatar-master>
-      <description-master :description="masterData.description"></description-master>
+      <all-settings></all-settings>
     </div>
   </div>
 </template>
@@ -18,6 +14,7 @@ import NameMaster from '~/components/MasterPage/NameMaster.vue'
 import AvatarMaster from '~/components/MasterPage/AvatarMaster.vue'
 import DescriptionMaster from '~/components/MasterPage/DescriptionMaster.vue'
 import MenuMaster from '~/components/MasterPage/MenuMaster.vue'
+import AllSettings from '~/components/MasterPage/SettingsPage/AllSettings.vue'
 
 export default {
   components: {
@@ -25,7 +22,8 @@ export default {
     NameMaster,
     AvatarMaster,
     DescriptionMaster,
-    MenuMaster
+    MenuMaster,
+    AllSettings
   },
   data() {
     return {
@@ -34,14 +32,8 @@ export default {
       notMaster: false,
     };
   },
-  async mounted() {
-    try {
-      const data = await this.$axios.$get(this.serverUrl + this.$route.path.substring(1));
-      this.masterData = data[0];
-    } catch (error) {
-      console.log("ошибка", error);
-      this.$router.push('/');
-    }
+  mounted() {
+
   },
 
   head() {
@@ -60,6 +52,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrapper {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 46%, rgba(253, 250, 250, 1) 46%, rgba(253, 250, 250, 1) 87%, rgba(255, 255, 255, 1) 87%);
+}
+
 .container {
   max-width: 586px;
   margin: 0 auto;

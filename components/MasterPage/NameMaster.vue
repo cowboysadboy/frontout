@@ -18,8 +18,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .name {
-  height: 180px;
-
   &__h1 {
     color: #000;
     font-size: 32px;

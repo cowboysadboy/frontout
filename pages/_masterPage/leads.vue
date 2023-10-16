@@ -1,14 +1,7 @@
 <template>
   <div class="wrapper">
     <app-header></app-header>
-    <menu-master :nickname="masterData.nickname"></menu-master>
-    <div class="container">
-      <name-master :first_name="masterData.first_name" :last_name="masterData.last_name"
-        :nickname="masterData.nickname"></name-master>
-      <avatar-master :avatar_link="masterData.avatar_link" :city="masterData.city"
-        :work_expirience="masterData.work_expirience"></avatar-master>
-      <description-master :description="masterData.description"></description-master>
-    </div>
+    <menu-master :nickname="$route.path.split('/')[1]"></menu-master>
   </div>
 </template>
 
@@ -40,7 +33,7 @@ export default {
       this.masterData = data[0];
     } catch (error) {
       console.log("ошибка", error);
-      this.$router.push('/');
+      // this.$router.push('/');
     }
   },
 
@@ -64,6 +57,5 @@ export default {
   max-width: 586px;
   margin: 0 auto;
   width: -webkit-fill-available;
-  padding: 0 30px;
 }
 </style>

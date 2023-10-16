@@ -1,9 +1,11 @@
 <template>
   <div class="avatar">
-    <img class="avatar__img" :src="avatar_link" alt="">
+    <img v-if="avatar_link" class="avatar__img" width="154px" height="154px" :src="avatar_link" alt="avatar">
+    <img v-else class="avatar__img" width="154px" height="154px" src="~/assets/images/master-page/default-image.svg"
+      alt="avatar">
     <div class="avatar__data">
-      <p class="data-text">{{ city }}</p>
-      <p class="data-text">{{ work_expirience }}</p>
+      <p class="data-text">Город: {{ city }}</p>
+      <p class="data-text">Опыт: {{ work_expirience }} лет</p>
     </div>
   </div>
 </template>
@@ -19,13 +21,21 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.name {
-  height: 180px;
+.avatar {
+  display: flex;
+  flex-wrap: wrap;
 
-  &__h1 {
-    color: #000;
-    font-size: 32px;
-    font-weight: 500;
+  &__img {
+    object-fit: cover;
+    margin-right: 25px;
+  }
+
+  &__data {
+    .data-text {
+      font-size: 14px;
+      font-weight: 500;
+      margin: 0 0 10px 0;
+    }
   }
 }
 </style>
