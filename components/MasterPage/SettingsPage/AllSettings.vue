@@ -51,14 +51,14 @@ export default {
       inputField: '',
       showButton: false,
       username: 0,
-      serverUrl: "http://localhost:3000/masters/",
+      serverUrl: "masters/",
       masterData: {}
     };
   },
   methods: {
     sendChanged() {
       this.$axios
-        .patch("http://localhost:3000/masters/" + this.$route.path.split('/')[1], this.masterData)
+        .patch(this.serverUrl + this.$route.path.split('/')[1], this.masterData)
         .then((response) => {
           // Обработка успешного ответа
           console.log(response);

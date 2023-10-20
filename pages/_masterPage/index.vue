@@ -30,7 +30,7 @@ export default {
   data() {
     return {
       masterData: {},
-      serverUrl: "http://localhost:3000/masters/",
+      serverUrl: "masters/",
       notMaster: false,
     };
   },

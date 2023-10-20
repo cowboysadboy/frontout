@@ -53,7 +53,7 @@ export default {
       this.error = ''
       // Отправка POST-запроса с помощью $http.post()
       this.$axios
-        .post("http://localhost:3000/masters", data)
+        .post("masters", data)
         .then((response) => {
           // Обработка успешного ответа
           console.log(response);

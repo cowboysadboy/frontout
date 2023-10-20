@@ -42,7 +42,8 @@ export default {
       },
     };
   },
-  mounted() { },
+  mounted() {
+  },
 
   methods: {
     submitForm() {
@@ -53,10 +54,10 @@ export default {
       this.error = ''
       // Отправка POST-запроса с помощью $http.post()
       this.$axios
-        .post("http://localhost:3000/login", data)
+        .post("login", data)
         .then((response) => {
           // Обработка успешного ответа
-          console.log(response);
+          console.log(response.data);
         }
         ).catch((error) => {
           console.log(error.response.data);

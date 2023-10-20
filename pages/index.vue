@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       allMasters: [],
-      serverUrl: "http://localhost:3000/masters",
+      serverUrl: "masters",
     };
   },
   mounted() {
