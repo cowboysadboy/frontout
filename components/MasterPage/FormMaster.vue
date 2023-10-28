@@ -1,8 +1,8 @@
 <template>
   <div class="form-container">
-    <H1 class="h1">
-      РЕГИСТРАЦИЯ
-    </H1>
+    <H3 class="h1">
+      Связаться со мной
+    </H3>
     <form @submit.prevent="submitForm" class="form">
       <div class="form__connection">
         <div class="connection email">

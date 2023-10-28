@@ -12,8 +12,8 @@
 </template>
 <style lang="scss" scoped>
 .header {
-  background: black;
-  padding: 12px 30px;
+  background: #29292D;
+  padding: 12px 20px;
   color: white;
   display: flex;
   justify-content: space-between;

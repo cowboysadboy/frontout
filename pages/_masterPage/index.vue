@@ -8,6 +8,8 @@
       <avatar-master :avatar_link="masterData.avatar_link" :city="masterData.city"
         :work_expirience="masterData.work_expirience"></avatar-master>
       <description-master :description="masterData.description"></description-master>
+      <picture-master></picture-master>
+      <form-master></form-master>
     </div>
   </div>
 </template>
@@ -17,7 +19,9 @@ import AppHeader from '~/components/AppHeader.vue';
 import NameMaster from '~/components/MasterPage/NameMaster.vue'
 import AvatarMaster from '~/components/MasterPage/AvatarMaster.vue'
 import DescriptionMaster from '~/components/MasterPage/DescriptionMaster.vue'
+import PictureMaster from '~/components/MasterPage/PictureMaster.vue'
 import MenuMaster from '~/components/MasterPage/MenuMaster.vue'
+import FormMaster from '~/components/MasterPage/FormMaster.vue'
 
 export default {
   components: {
@@ -25,7 +29,9 @@ export default {
     NameMaster,
     AvatarMaster,
     DescriptionMaster,
-    MenuMaster
+    MenuMaster,
+    PictureMaster,
+    FormMaster
   },
   data() {
     return {
@@ -64,6 +70,6 @@ export default {
   max-width: 586px;
   margin: 0 auto;
   width: -webkit-fill-available;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 </style>

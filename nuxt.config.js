@@ -39,7 +39,8 @@ export default {
     ],
     axios: {
         // настройки для Axios
-        baseURL: 'http://cowboysadboy.store/api/'
+        // baseURL: 'http://cowboysadboy.store/api/'
+        baseURL: 'http://localhost:3000/api/'
     },
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
