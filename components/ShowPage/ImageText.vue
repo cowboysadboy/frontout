@@ -52,7 +52,7 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   .img-text {
-    background: white;
+    // background: white;
     .container {
       color: #2F2E41;
       max-width: 75%;
