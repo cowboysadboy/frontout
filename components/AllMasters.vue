@@ -7,7 +7,7 @@
       </h3>
       <div class="descr-p">
         <ul>
-          <li>Город: Изумрудный</li>
+          <li>Город: Изумрудный;</li>
           <li>Опыт работы: 10 лет</li>
         </ul>
       </div>
@@ -60,24 +60,26 @@ export default {
   // background: #f8f7ff;
   text-decoration: none;
   color: #29292D;
+  background: #F8F7FF;
 
   &__descr {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
 
     ul {
       margin: 0 auto;
       padding: 0;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      // justify-content: center;
       font-size: 13px;
       list-style-type: none;
-      max-width: 90%;
+      // max-width: 90%;
     }
-    li{
-      margin: 0 5px; 
+
+    li {
+      margin-right: 5px;
     }
 
     .descr-name {
@@ -92,7 +94,7 @@ export default {
       display: flex;
       flex-wrap: wrap;
       margin-top: 10px;
-      justify-content: center;
+      // justify-content: center;
     }
   }
 
@@ -101,4 +103,5 @@ export default {
     margin-right: 5px;
     margin-bottom: 5px;
   }
-}</style>
+}
+</style>

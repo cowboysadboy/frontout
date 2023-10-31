@@ -2,6 +2,7 @@
   <div class="wrapper">
     <app-header></app-header>
     <image-text></image-text>
+    <banner-register></banner-register>
     <div class="masters-list">
       <div class="masters-list__title">Примеры профилей тату-мастеров</div>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dicta eos corporis iste a quas.</p>
@@ -17,11 +18,13 @@
 import AppHeader from '~/components/AppHeader.vue';
 import ImageText from '~/components/ShowPage/ImageText.vue';
 import MasterList from '~/components/MasterList.vue';
+import BannerRegister from '~/components/ShowPage/BannerRegister.vue';
 export default {
   components: {
     AppHeader,
     ImageText,
     MasterList,
+    BannerRegister
   },
   data() {
     return {
@@ -65,14 +68,11 @@ export default {
     margin: 65px auto 20px auto;
   }
 
-  &__block {
-
-  }
+  &__block {}
 
   .countable {
     margin-left: auto;
-    
-    // background: white;
+    // background: rgb(176, 217, 241);
     // border-bottom: 1px solid rgb(31, 31, 31);
     // padding: 30px 0;
   }
