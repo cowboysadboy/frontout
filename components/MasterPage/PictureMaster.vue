@@ -43,7 +43,8 @@ export default {
     margin-bottom: 2%;
 
     @media screen and (max-width: 460px) {
-      width: 49%;
+      // width: 49%;
+      width: 32%;
     }
   }
 }

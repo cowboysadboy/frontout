@@ -100,7 +100,7 @@ export default {
 }
 
 .h1 {
-  font-size: 32px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   margin: 0 auto 15px;

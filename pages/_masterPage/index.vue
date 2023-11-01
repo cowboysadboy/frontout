@@ -11,6 +11,7 @@
       <picture-master></picture-master>
       <form-master></form-master>
     </div>
+    <app-header></app-header>
   </div>
 </template>
 
