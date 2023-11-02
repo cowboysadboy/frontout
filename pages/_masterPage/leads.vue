@@ -2,6 +2,10 @@
   <div class="wrapper">
     <app-header></app-header>
     <menu-master :nickname="$route.path.split('/')[1]"></menu-master>
+    {{ $route.path.split('/')[1] }}
+    <pre>
+      {{ masterData }}
+    </pre>
   </div>
 </template>
 
@@ -22,15 +26,15 @@ export default {
   },
   data() {
     return {
-      masterData: {},
-      serverUrl: "masters/",
+      masterData: [],
+      serverUrl: "leads/",
       notMaster: false,
     };
   },
   async mounted() {
     try {
-      const data = await this.$axios.$get(this.serverUrl + this.$route.path.substring(1));
-      this.masterData = data[0];
+      const data = await this.$axios.$get(this.serverUrl + this.$route.path.split('/')[1]);
+      this.masterData = data;
     } catch (error) {
       console.log("ошибка", error);
       // this.$router.push('/');

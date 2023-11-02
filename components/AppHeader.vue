@@ -13,7 +13,7 @@
 <style lang="scss" scoped>
 .header {
   background: #29292D;
-  padding: 12px 20px;
+  padding: 12px 30px;
   color: white;
   display: flex;
   justify-content: space-between;

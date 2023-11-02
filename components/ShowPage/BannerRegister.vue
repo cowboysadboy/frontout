@@ -50,7 +50,7 @@
   }
 
   &__link {
-    background: #FF6584;
+    background: #5fd65b;
     color: white;
     -webkit-text-decoration: none;
     text-decoration: none;

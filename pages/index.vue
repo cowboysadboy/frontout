@@ -1,9 +1,11 @@
 <template>
   <div class="wrapper">
     <app-header></app-header>
+
     <p class="p">Добро пожаловать в наш интернет-сервис для тату-мастеров! Мы предлагаем удобную платформу, где вы можете
       зарегистрироваться и создать свое персональное портфолио.
     </p>
+
     <div class="masters-list">
       <all-masters v-for="item in allMasters" :key="item" :master="item">
       </all-masters>

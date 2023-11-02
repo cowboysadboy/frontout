@@ -20,7 +20,7 @@ export default {
   background: #D9D9D9;
   padding: 0 30px;
   display: flex;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
 
   &__link {
     text-decoration: none;

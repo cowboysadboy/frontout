@@ -84,6 +84,7 @@ export default {
 
     .descr-name {
       margin: 0;
+      font-size: 32px;
     }
 
     max-width: 75%;

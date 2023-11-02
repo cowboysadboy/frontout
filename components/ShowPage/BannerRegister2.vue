@@ -54,17 +54,22 @@
     content: url(~/assets/images/show-page/girl-1.png);
   }
 
-  .container::after {
-    position: absolute;
-    right: -10%;
-    top: 40%;
-    content: url(~/assets/images/show-page/girl-2.png);
-  }
+  // .container::after {
+  //   position: absolute;
+  //   right: -10%;
+  //   top: 40%;
+  //   content: url(~/assets/images/show-page/girl-2.png);
+  // }
 
   &__title {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 460px) {
+      font-size: 24px;
+    }
+
   }
 
   &__descr {
@@ -76,7 +81,7 @@
   }
 
   &__link {
-    background: #FF6584;
+    background: #5fd65b;
     color: white;
     -webkit-text-decoration: none;
     text-decoration: none;

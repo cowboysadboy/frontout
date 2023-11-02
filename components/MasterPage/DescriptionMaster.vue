@@ -17,7 +17,7 @@ export default {
 <style lang="scss" scoped>
 .description {
   &__p {
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
   }

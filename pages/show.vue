@@ -6,7 +6,7 @@
     <div class="masters-list">
       <div class="masters-list__title">Примеры профилей тату-мастеров</div>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dicta eos corporis iste a quas.</p>
-      <all-masters v-for="item, i in allMasters.slice(2, 3)" :key="item" :master="item"
+      <all-masters v-for="item, i in allMasters.slice(0, 3)" :key="item" :master="item"
         :class="{ 'masters-list__block': true, 'countable': i % 2 !== 0, }">
       </all-masters>
     </div>
