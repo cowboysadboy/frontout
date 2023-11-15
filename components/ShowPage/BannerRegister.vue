@@ -7,9 +7,9 @@
       <div class="banner-register__descr">
         И получи бесплатное обслуживание навсегда
       </div>
-      <nuxt-link to="registration" class="banner-register__link">
+      <!-- <nuxt-link to="registration" class="banner-register__link">
         Регистрация
-      </nuxt-link>
+      </nuxt-link> -->
     </div>
   </div>
 </template>

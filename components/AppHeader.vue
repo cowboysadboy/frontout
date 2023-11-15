@@ -5,8 +5,8 @@
       <p class="description">Каталог тату-мастеров</p>
     </div>
     <div class="header__login">
-      <router-link class="login-button" to="/login">Вход</router-link>
-      <router-link class="login-button" to="/registration">Регистрация</router-link>
+      <!-- <router-link class="login-button" to="/login">Вход</router-link>
+      <router-link class="login-button" to="/registration">Регистрация</router-link> -->
     </div>
   </div>
 </template>

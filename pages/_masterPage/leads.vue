@@ -2,10 +2,9 @@
   <div class="wrapper">
     <app-header></app-header>
     <menu-master :nickname="$route.path.split('/')[1]"></menu-master>
-    {{ $route.path.split('/')[1] }}
-    <pre>
-      {{ masterData }}
-    </pre>
+    <div v-for="lead in masterData" class="list-lead" :key="lead">
+      <list-leads :lead="lead"></list-leads>
+    </div>
   </div>
 </template>
 
@@ -15,6 +14,7 @@ import NameMaster from '~/components/MasterPage/NameMaster.vue'
 import AvatarMaster from '~/components/MasterPage/AvatarMaster.vue'
 import DescriptionMaster from '~/components/MasterPage/DescriptionMaster.vue'
 import MenuMaster from '~/components/MasterPage/MenuMaster.vue'
+import ListLeads from '~/components/MasterPage/LeadsPage.vue/ListLeads.vue';
 
 export default {
   components: {
@@ -22,7 +22,8 @@ export default {
     NameMaster,
     AvatarMaster,
     DescriptionMaster,
-    MenuMaster
+    MenuMaster,
+    ListLeads
   },
   data() {
     return {

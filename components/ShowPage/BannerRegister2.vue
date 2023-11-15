@@ -5,11 +5,11 @@
         Остались вопросы?
       </div>
       <div class="banner-register__descr">
-        Напиши нам на @sraka-tattoo или переходи к регистрации по ссылке
+        Напиши нам на @cowboysadboy или переходи к регистрации по ссылке
       </div>
-      <nuxt-link to="registration" class="banner-register__link">
+      <!-- <nuxt-link to="registration" class="banner-register__link">
         Регистрация
-      </nuxt-link>
+      </nuxt-link> -->
     </div>
   </div>
 </template>
